@@ -20,26 +20,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-u57o!p@hc9ff1fplfygt_=2fdk3_68w&7vh7%6spe7g&!2fq=8'
+SECRET_KEY = 'django-insecure-0*f496&^8b5y4@(9n10@&9n(8^4hu1qr%gu&zxo@b_q_8-l*%7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "[::1]",
-    "testserver",
-    '*',
-]
+ALLOWED_HOSTS = []
 
-TEMPLATES_DIR = BASE_DIR / 'templates'
 
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
+    'core.apps.CoreConfig',
     'pages.apps.PagesConfig',
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,6 +53,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blogicum.urls'
+
+TEMPLATES_DIR = BASE_DIR / 'templates'
 
 TEMPLATES = [
     {
@@ -128,11 +124,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static_dev',
-]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static_dev',
+]
